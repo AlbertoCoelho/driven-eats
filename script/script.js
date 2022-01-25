@@ -100,5 +100,10 @@ function verificarPedido() {
         const botao = document.querySelector(".fazer-pedido");
         botao.classList.add("ativo");
         botao.innerHTML = "Fazer pedido";
+        botao.disabled = false;
+        botao.style.cursor = 'pointer';
+    } else {
+        botao.setAttribute('disabled');
+        botao.style.cursor = 'default';
     }
 }
