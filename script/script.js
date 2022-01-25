@@ -9,6 +9,9 @@ let precoBebida;
 let precoSobremesa;
 let precoTotal = 0;
 
+const nome = prompt("Por favor, digite o seu nome!");
+const endereco = prompt("Por favor, agora digite o seu endereco para o pedido!");
+
 function selecionarPrato(elemento, nomePrato, preco) {
 
     const selecionado = document.querySelector(".prato .selecionado");
@@ -79,6 +82,10 @@ function confirmarPedido() {
 
     document.querySelector(".confirmar-pedido .total .preco").innerHTML = `R$ ${precoTotal.toFixed(2)}`;
 
+    document.querySelector(".confirmar-pedido .username .value").innerHTML = nome;
+
+    document.querySelector(".confirmar-pedido .userAdress .value").innerHTML = endereco;
+
 }
 
 
@@ -89,7 +96,7 @@ function cancelarPedido() {
 
 function enviarZap() {
     const telefoneRestaurante = 557199999999;
-    const encodedText = encodeURIComponent(`Olá, gostaria de fazer o pedido: \n- Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \nTotal: R$ ${precoTotal.toFixed(2)}`);
+    const encodedText = encodeURIComponent(`Olá, gostaria de fazer o pedido: \n- Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \nTotal: R$ ${precoTotal.toFixed(2)} \n\nNome: ${nome} \nEndereço: ${endereco}`);
 
     const urlWhatsapp = `https://wa.me/${telefoneRestaurante}?text=${encodedText}`;
     window.open(urlWhatsapp);
