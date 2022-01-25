@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>Driven Eats</title>
+  </head>
+  <body>
+    <div class="overlay escondido">
+      <div class="confirmar-pedido">
+        <div class="titulo">Confirme seu pedido</div>
+        <ul>
+          <li class="prato">
+            <div class="nome">Estrombelete Yin Yang</div>
+            <div class="preco">14,90</div>
+          </li>
+          <li class="bebida">
+            <div class="nome">Coquinha gelada</div>
+            <div class="preco">4,90</div>
+          </li>
+          <li class="sobremesa">
+            <div class="nome">Pudim</div>
+            <div class="preco">7,90</div>
+          </li>
+          <li class="total">
+            <div>Total</div>
+            <div class="preco">R$ 27,70</div>
+          </li>
+        </ul>
+        <button class="confirmar" onclick="enviarZap()">Tudo certo, pode pedir!</button>
+        <button class="cancelar" onclick="cancelarPedido()">Cancelar</button>
+      </div>
+    </div>
+
+    <div class="header">
+      <div class="titulo">Driven Eats</div>
+      <div class="subtitulo">Sua comida em 6 minutos</div>
+    </div>
+
+    <div class="menu">
+      <div class="secao">
+        <div class="titulo">Primeiro, seu prato</div>
+        <div class="opcoes prato">
+          <div class="opcao" onclick="selecionarPrato(this, 'Vegan Tofu Kung Pao', 24.99)">
+            <img src="img/byanjushka vegane einfache Rezepte  Lifestyle  Storyteller.jpg" />
+            <div class="titulo">Vegan Tofu Kung Pao</div>
+            <div class="descricao">A classic from Chinese cuisine</div>
+            <div class="fundo">
+              <div class="preco">R$ 24,99</div>
+              <div class="check">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <div class="opcao" onclick="selecionarPrato(this, 'Vegan summer pasta', 21.99)">
+            <img src="img/Vegan summer pasta - Lazy Cat Kitchen.png" />
+            <div class="titulo">Vegan summer pasta</div>
+            <div class="descricao">Uses the best of summer produce</div>
+            <div class="fundo">
+              <div class="preco">R$ 21,99</div>
+              <div class="check">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <div class="opcao" onclick="selecionarPrato(this, 'Vegan Potato Curry', 23.99)">
+            <img src="img/Easy Vegan Potato Curry.jpg" />
+            <div class="titulo">Vegan Potato Curry</div>
+            <div class="descricao">This vegan potato curry is made with healthy ingredients</div>
+            <div class="fundo">
+              <div class="preco">R$ 23,99</div>
+              <div class="check">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="secao">
+        <div class="titulo">Agora, sua bebida</div>
+        <div class="opcoes bebida">
+          <div class="opcao" onclick="selecionarBebida(this, 'Orange Juice', 6.50)">
+            <img src="img/7 Vitamins For Women To Boost Fertility.png" />
+            <div class="titulo">Orange Juice</div>
+            <div class="descricao">300ml</div>
+            <div class="fundo">
+              <div class="preco">R$ 6,50</div>
+              <div class="check">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <div class="opcao" onclick="selecionarBebida(this, 'Raw Beet & Apple Detox Smoothie', 6.90)">
+            <img src="img/Beet Apple and Ginger Detox Smoothie Vegan Raw.jpg" />
+            <div class="titulo">Raw Beet & Apple Detox Smoothie</div>
+            <div class="descricao">300ml</div>
+            <div class="fundo">
+              <div class="preco">R$ 6,90</div>
+              <div class="check">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <div class="opcao" onclick="selecionarBebida(this, 'Strawberry liqueur', 12.90)">
+            <img src="img/Frozen Strawberries by PaSt1978 on DeviantArt.jpg" />
+            <div class="titulo">Strawberry liqueur</div>
+            <div class="descricao">350ml</div>
+            <div class="fundo">
+              <div class="preco">R$ 12,90</div>
+              <div class="check">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="secao">
+        <div class="titulo">Por fim, sua sobremesa</div>
+        <div class="opcoes sobremesa">
+          <div class="opcao" onclick="selecionarSobremesa(this, 'Vegan Chocolate Ice Cream', 9.90)">
+            <img src="img/Vegan Chocolate Ice Cream.jpg" />
+            <div class="titulo">Vegan Chocolate Ice Cream</div>
+            <div class="descricao">Ice cream</div>
+            <div class="fundo">
+              <div class="preco">R$ 9,90</div>
+              <div class="check">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <div class="opcao" onclick="selecionarSobremesa(this, 'Gourmet popcorn', 12.90)">
+            <img src="img/18 Popcorn Recipes For Your Next Netflix Marathon.jpg" />
+            <div class="titulo">Gourmet popcorn</div>
+            <div class="descricao">"That's too much popcorn." — said no one ever</div>
+            <div class="fundo">
+              <div class="preco">R$ 12,90</div>
+              <div class="check">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <div class="opcao" onclick="selecionarSobremesa(this, 'Passionfruit pie', 8.50)">
+            <img src="img/Vegan Passion Fruit.png" />
+            <div class="titulo">Vegan Passion Fruit</div>
+            <div class="descricao">Sweet, tangy, creamy filling with a chocolate crust</div>
+            <div class="fundo">
+              <div class="preco">R$ 8,50</div>
+              <div class="check">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <a class="fazer-pedido" onclick="confirmarPedido()">
+        Selecione os 3 itens<br>para fechar o pedido
+      </a>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="/script/script.js"></script>
+  </body>
+</html>
