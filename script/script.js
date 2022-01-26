@@ -109,7 +109,8 @@ function verificarPedido() {
         botao.disabled = false;
         botao.style.cursor = 'pointer';
     } else {
-        botao.setAttribute('disabled');
+        const botao = document.querySelector(".fazer-pedido");
+        botao.setAttribute('disabled', "");
         botao.style.cursor = 'default';
     }
 }
