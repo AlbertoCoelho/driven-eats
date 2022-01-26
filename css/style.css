@@ -203,6 +203,7 @@ body {
   font-size: 22px;
   height: 52px;
   border-radius: 100px;
+  cursor: pointer;
 }
 
 .confirmar-pedido .cancelar {
@@ -210,6 +211,7 @@ body {
   background-color: transparent;
   font-size: 20px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .escondido {

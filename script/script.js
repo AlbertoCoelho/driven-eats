@@ -36,7 +36,6 @@ function selecionarBebida(elemento, nomeBebida, preco) {
         selecionado.classList.remove("selecionado");
     } else {
         contadorItems = contadorItems + 1;
-
     }
     precoBebida = preco;
     bebida = nomeBebida;
