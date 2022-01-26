@@ -83,7 +83,7 @@ function confirmarPedido() {
 
     document.querySelector(".confirmar-pedido .username .value").innerHTML = nome;
 
-    document.querySelector(".confirmar-pedido .userAdress .value").innerHTML = endereco;
+    document.querySelector(".confirmar-pedido .user-adress .value").innerHTML = endereco;
 
 }
 
